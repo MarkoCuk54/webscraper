@@ -1,4 +1,5 @@
 # Web Scraping with Python
+```bash
             /      \         __      _\( )/_
     \  \  ,,  /  /   | /  \ |    /(O)\ 
      '-.`\()/`.-'   \_\\  //_/    _.._   _\(o)/_  //  \\
@@ -12,7 +13,7 @@ _\( )/_            /(_)\      .--'/()\'--.    | /  \ |   /(O)\
        _\\()//_     _\(_)/_    |        |      //()\\ 
       / //  \\ \     /(o)\      \      /       \\  //
        | \__/ |
-       
+```     
 This is a simple Python script for web scraping using the `requests` library to fetch a web page and `BeautifulSoup` for parsing and extracting information from it. It allows you to enter a URL, and it will print out the text and href attributes of all the anchor tags (`<a>`) on the web page.
 
 ## Prerequisites
