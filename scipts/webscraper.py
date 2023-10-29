@@ -2,6 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 from robots_checker import check_robots_txt
+from logo import printLogo;
+
+
+printLogo()
 
 url = input("\nEnter the URL of the website you want to scrape: ")
 
