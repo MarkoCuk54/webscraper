@@ -2,11 +2,28 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 
-url = input("Enter the URL of the website you want to scrape: ")
+url = input("\nEnter the URL of the website you want to scrape: ")
+
+# Ask the user to choose a User-Agent or skip
+print("\nChoose a User-Agent: \n")
+print("\t1. Googlebot")
+print("\t2. Bingbot")
+print("\tPress Enter to skip\n")
+choice = input("Enter your choice (1,2): ")
 
 parsed_url = urlparse(url)
 if not parsed_url.scheme:
     url = "https://" + url
+
+
+if choice == "1":
+    user_agent = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+elif choice == "2":
+    user_agent = 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)'
+else:
+    user_agent = ''
+
+headers = {'User-Agent': user_agent} if user_agent else {}
 
 try:
     response = requests.get(url)
